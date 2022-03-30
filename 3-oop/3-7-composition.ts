@@ -2,7 +2,7 @@
         type CoffeeCup = {
             shots: number;
             hasMilk: boolean;
-            hasSugar?: boolean; // Optional로 추가.
+            hasSugar?: boolean;
         }
 
         interface CoffeeMaker {

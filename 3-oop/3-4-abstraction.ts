@@ -6,7 +6,7 @@
     }
 
     // 인터페이스는 코드를 사용하는 사용법, 계약서와 비슷한 개념이다.
-    // 둘을 구분해주기 위해 인터페이스명앞에 I를 붙이거나 클래스뒤에 Impl을 붙이기도 한다.
+    // 구분해주기 위해 인터페이스명앞에 I를 붙이거나 인터페이스를 사용하는 클래스명뒤에 Impl을 붙이기도 한다.
     interface CoffeeMaker {
         makeCoffee(shots: number): CoffeeCup;
     }
@@ -17,7 +17,7 @@
         clean(): void;
     }
 
-    // CoffeeMaker의 규격을 따르는 CoffeeMachine이라는 뜻이다.
+    // 이 클래스는 CoffeeMaker의 규격을 따른다는 의미이다.
     class CoffeeMachine implements CoffeeMaker, CommercialCoffeeMaker {
         // private과 static은 다르다.
         private static BEANS_GRAMM_PER_SHOT: number = 7;
@@ -89,7 +89,6 @@
     }
 
     const maker: CoffeeMachine = CoffeeMachine.makeMachine(32);
-
     // 같은 CoffeeMachine클래스를 가져오지만
     // 생성자 내부에서 인터페이스를 각각 다르게 지정하여 해당 인터페이스를 따르게 된다.
     const amateur = new AmateurUser(maker);
