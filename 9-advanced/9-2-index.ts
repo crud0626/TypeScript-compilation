@@ -1,7 +1,7 @@
 {
     // Utility types
     const obj = {
-        name: 'ellie';
+        name: 'ellie'
     }
 
     type Animal = {
